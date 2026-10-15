@@ -263,7 +263,8 @@ const SIXLINE = {
   sha256:     "",
   video:      "https://titokip.github.io/assets/six-in-row-game.mp4",
   googlePlay: "",
-  amazon:     "https://www.amazon.com/offline-casual-strategy-board-smart/dp/B0HLWP4NYP"
+  amazon:     "https://www.amazon.com/offline-casual-strategy-board-smart/dp/B0HLWP4NYP",
+  videoCover: "https://titokip.github.io/assets/video-cover.jpg" // your own cover image
 };
 /* ===== end of settings ===== */
 
@@ -311,7 +312,7 @@ const SIXLINE = {
     $("videoBtn").hidden = false;
     const box = $("videoBox");
     if (v.type === "yt") {
-      box.style.backgroundImage = "url(https://i.ytimg.com/vi/" + v.id + "/hqdefault.jpg)";
+      box.style.backgroundImage = "url(" + (C.videoCover || ("https://i.ytimg.com/vi/" + v.id + "/hqdefault.jpg")) + ")";
       box.innerHTML = '<button class="vplay" aria-label="Play video"><i></i></button>';
       box.querySelector(".vplay").addEventListener("click", () => {
         box.innerHTML = '<iframe src="https://www.youtube-nocookie.com/embed/' + v.id + '?autoplay=1&rel=0" title="Sixline video" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>';
