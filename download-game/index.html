@@ -317,11 +317,12 @@ const SIXLINE = {
         box.innerHTML = '<iframe src="https://www.youtube-nocookie.com/embed/' + v.id + '?autoplay=1&rel=0" title="Sixline video" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>';
       });
     } else if (v.type === "file") {
-  box.innerHTML = '<video controls preload="none" playsinline poster="https://titokip.github.io/assets/video-cover.jpg" src="' + v.src + '"></video>';
-} else {
-  box.innerHTML = '<a class="btn" style="margin:auto" href="' + v.src + '" rel="noopener">Watch the video</a>';
-  box.style.display = "flex";
-}
+      box.innerHTML = '<video controls preload="none" playsinline src="' + v.src + '"></video>';
+    } else {
+      box.innerHTML = '<a class="btn" style="margin:auto" href="' + v.src + '" rel="noopener">Watch the video</a>';
+      box.style.display = "flex";
+    }
+  }
 
   // Keep the search-engine data in step with the settings above
   try {
