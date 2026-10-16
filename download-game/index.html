@@ -258,6 +258,7 @@ const SIXLINE = {
   apkUrl:     "https://github.com/titokip/titokip.github.io/releases/download/v1.0.3/Sixline.apk",
   version:    "1.0.3",
   size:       "10 MB",
+  downloads:  "",   /250K+ downloads/ e.g. "250+ downloads"  (type your real number here),
   minAndroid: "",
   sha256:     "",
   video:      "https://titokip.github.io/assets/six-in-row-game.mp4",
@@ -287,6 +288,7 @@ const SIXLINE = {
   const bits = [];
   if (C.version) bits.push("Version " + C.version);
   if (C.size) bits.push(C.size);
+  if (C.downloads) bits.push(C.downloads);
   if (C.minAndroid) bits.push("Android " + C.minAndroid + "+");
   if (bits.length && C.apkUrl) { $("metaLine").innerHTML = bits.map((b) => "<span>" + b + "</span>").join(""); $("metaLine").hidden = false; }
   if (C.sha256 && C.apkUrl) { $("shaCode").textContent = C.sha256; $("verifyLine").hidden = false; }
