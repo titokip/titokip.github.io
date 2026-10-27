@@ -3,30 +3,45 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Sixline – Six in a Row Strategy Game for Android</title>
-<meta name="description" content="Sixline is a free, relaxing strategy game. Slide your balls, align six in a row and outsmart the AI. Works offline.">
+<title>Sixline – Download the Six in a Row Game for Android (APK)</title>
+<meta name="description" content="Download Sixline for Android: a relaxing six-in-a-row strategy game. Slide your balls, beat the AI and keep your daily streak. Works offline.">
 <meta name="theme-color" content="#1A1B41">
 <link rel="icon" type="image/png" href="assets/icon-192.png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 
-<!-- Social sharing. IMPORTANT: after publishing, replace YOUR-USERNAME / YOUR-REPO below with your real
-     GitHub Pages address, because social sites need an absolute image URL. -->
+<!-- EDIT ONCE: replace YOUR-USERNAME.github.io/YOUR-REPO below with your real site address, and change "download" if your folder has a different name (lines marked SITE-URL).
+     Social sites and search engines need the full address. -->
+<link rel="canonical" href="https://titokip.github.io/download/"> <!-- SITE-URL -->
 <meta property="og:type" content="website">
-<meta property="og:title" content="Sixline – Six in a Row Strategy Game">
-<meta property="og:description" content="Slide your balls, align six in a row and outsmart the AI. Free and works offline.">
-<meta property="og:image" content="https://titokip.github.io/sixline/assets/social-preview.jpg">
+<meta property="og:title" content="Sixline – Six in a Row Game for Android">
+<meta property="og:description" content="Slide, block and line up six in a row. Download the Android game, play offline and build a daily streak.">
+<meta property="og:url" content="https://titokip.github.io/download/"> <!-- SITE-URL -->
+<meta property="og:image" content="https://titokip.github.io/download/assets/social-preview.jpg"> <!-- SITE-URL -->
 <meta name="twitter:card" content="summary_large_image">
 
+<script type="application/ld+json" id="ld-app">
+{
+  "@context": "https://schema.org",
+  "@type": "MobileApplication",
+  "name": "Sixline",
+  "alternateName": "Sixline: Six in a Row Game",
+  "description": "A relaxing strategy game for Android. Slide your balls one step at a time, block your opponent and line up six in a row to beat the AI. Works offline, with three difficulty levels, a daily streak and saved stats.",
+  "applicationCategory": "GameApplication",
+  "operatingSystem": "Android",
+  "inLanguage": "en",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+}
+</script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "VideoGame",
-  "name": "Sixline",
-  "description": "A relaxing strategy game where you slide balls and align six in a row to outsmart the AI.",
-  "applicationCategory": "GameApplication",
-  "operatingSystem": "Android",
-  "gamePlatform": "Android",
-  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "Is Sixline free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Sixline is free to download and play. It is supported by ads." } },
+    { "@type": "Question", "name": "Does Sixline work offline?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. The whole game works offline. Ads need an internet connection when they are shown." } },
+    { "@type": "Question", "name": "Is it safe to install the Sixline APK?", "acceptedAnswer": { "@type": "Answer", "text": "Only install apps from sources you trust. This file is published by the developer. You can also compare the file's SHA-256 checksum with the one shown on this page." } },
+    { "@type": "Question", "name": "How do I update Sixline?", "acceptedAnswer": { "@type": "Answer", "text": "Download the newest APK from this page and install it over the old one. Installing a newer version signed by the same developer normally keeps your scores and settings." } }
+  ]
 }
 </script>
 
@@ -39,239 +54,287 @@
 :root {
   --font-display: 'Orbitron', 'Trebuchet MS', 'Segoe UI', sans-serif;
   --font-body: 'Roboto', 'Segoe UI', system-ui, sans-serif;
-  --bg0: #0c0d26; --bg1: #1A1B41;
-  --cyan: #00D4FF; --gold: #FFD700; --ink: #14153a;
+  --bg0: #0c0d26; --bg1: #1A1B41; --cyan: #00D4FF; --gold: #FFD700; --ink: #14153a;
   --text: #F2F5FF; --muted: rgba(242,245,255,.78);
 }
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; background: var(--bg0); }
-body { font-family: var(--font-body); color: var(--text); line-height: 1.6; background: radial-gradient(120% 60% at 50% 0%, #2c2f6b 0%, #1A1B41 40%, #0c0d26 100%) no-repeat, var(--bg0); background-attachment: fixed; overflow-x: hidden; }
+body { font-family: var(--font-body); color: var(--text); line-height: 1.65; background: radial-gradient(120% 55% at 50% 0%, #2c2f6b 0%, #1A1B41 38%, #0c0d26 100%) no-repeat, var(--bg0); background-attachment: fixed; overflow-x: hidden; }
 img { max-width: 100%; display: block; }
-a { color: inherit; }
+a { color: var(--cyan); }
 :focus-visible { outline: 3px solid var(--cyan); outline-offset: 3px; border-radius: 8px; }
-.wrap { width: min(1080px, 100% - 40px); margin-inline: auto; }
-section { padding: 72px 0; }
-h1, h2, h3 { font-family: var(--font-display); line-height: 1.15; }
-h2 { font-size: clamp(26px, 5vw, 38px); text-align: center; margin-bottom: 12px; }
-.lead { text-align: center; color: var(--muted); font-size: 18px; max-width: 620px; margin: 0 auto 40px; }
+.wrap { width: min(980px, 100% - 36px); margin-inline: auto; }
+h1, h2, h3 { font-family: var(--font-display); line-height: 1.2; }
+h2 { font-size: clamp(22px, 4.6vw, 30px); margin-bottom: 16px; }
+section { padding: 40px 0 8px; }
+p { color: var(--muted); }
 
-/* glossy balls */
-.ball { position: relative; display: inline-block; border-radius: 50%; background: radial-gradient(circle at 32% 28%, #6a6f8f 0%, #2a2c45 32%, #0a0a12 78%); box-shadow: inset -3px -5px 8px rgba(0,0,0,.6), inset 2px 2px 5px rgba(255,255,255,.12), 0 5px 9px rgba(0,0,0,.45); }
-.ball.cy { background: radial-gradient(circle at 32% 28%, #eaffff 0%, #5fe8ff 28%, #0aa8de 62%, #05577e 100%); box-shadow: inset -3px -5px 8px rgba(0,60,100,.55), inset 2px 2px 5px rgba(255,255,255,.35), 0 5px 9px rgba(0,0,0,.4), 0 0 10px rgba(0,212,255,.35); }
-.ball::after { content: ''; position: absolute; left: 20%; top: 11%; width: 38%; height: 25%; border-radius: 50%; background: radial-gradient(ellipse at 40% 40%, rgba(255,255,255,.85), rgba(255,255,255,0) 70%); transform: rotate(-25deg); }
+/* top bar */
+header { position: sticky; top: 0; z-index: 10; backdrop-filter: blur(10px); background: rgba(12,13,38,.78); border-bottom: 1px solid rgba(255,255,255,.08); }
+.bar { display: flex; align-items: center; justify-content: space-between; height: 58px; }
+.brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text); font-family: var(--font-display); font-weight: 700; letter-spacing: 2px; }
+.brand img { width: 32px; height: 32px; border-radius: 9px; }
+.bar a.top { text-decoration: none; font-weight: 500; font-size: 14px; color: var(--ink); background: linear-gradient(180deg, #5be4ff, #00bff0); padding: 8px 16px; border-radius: 12px; }
 
-/* header */
-header { position: sticky; top: 0; z-index: 10; backdrop-filter: blur(10px); background: rgba(12,13,38,.72); border-bottom: 1px solid rgba(255,255,255,.08); }
-.nav { display: flex; align-items: center; justify-content: space-between; height: 64px; }
-.brand { display: flex; align-items: center; gap: 10px; text-decoration: none; font-family: var(--font-display); font-weight: 700; letter-spacing: 2px; }
-.brand img { width: 34px; height: 34px; border-radius: 9px; }
-.nav ul { display: flex; gap: 26px; list-style: none; }
-.nav a.l { text-decoration: none; color: var(--muted); font-weight: 500; font-size: 15px; }
-.nav a.l:hover { color: #fff; }
-@media (max-width: 640px) { .nav ul { display: none; } }
-
-/* buttons */
-.btn { --edge: #006a94; display: inline-block; font-family: var(--font-display); font-weight: 700; font-size: 15px; letter-spacing: 1px; text-transform: uppercase; text-decoration: none; color: var(--ink); padding: 15px 30px; border-radius: 16px; background: linear-gradient(180deg, #5be4ff 0%, #00bff0 55%, #0097cc 100%); box-shadow: 0 5px 0 var(--edge), 0 10px 18px rgba(0,0,0,.35), inset 0 1px 0 rgba(255,255,255,.55); transition: transform .1s, box-shadow .1s; }
+/* hero (Play-Store style) */
+.hero { padding: 34px 0 6px; }
+.head { display: grid; grid-template-columns: auto 1fr; gap: 22px; align-items: center; }
+.head .appicon { width: 132px; height: 132px; border-radius: 30px; box-shadow: 0 16px 40px rgba(0,0,0,.55), 0 0 40px rgba(0,212,255,.28); }
+.head h1 { font-size: clamp(30px, 6.4vw, 46px); letter-spacing: 1px; background: linear-gradient(180deg, #fff 20%, #8fe6ff 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.head .tag { margin-top: 4px; font-size: clamp(15px, 3vw, 19px); color: var(--text); font-weight: 500; }
+.facts { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
+.fact { font-size: 13px; font-weight: 500; padding: 5px 12px; border-radius: 999px; background: rgba(255,255,255,.08); border: 1px solid rgba(0,212,255,.4); color: var(--text); }
+.cta { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; margin-top: 24px; }
+.btn { --edge: #006a94; display: inline-flex; align-items: center; gap: 10px; text-decoration: none; font-family: var(--font-display); font-weight: 700; font-size: 17px; letter-spacing: 1px; text-transform: uppercase; color: var(--ink); padding: 17px 30px; border-radius: 16px; background: linear-gradient(180deg, #5be4ff 0%, #00bff0 55%, #0097cc 100%); box-shadow: 0 5px 0 var(--edge), 0 12px 22px rgba(0,0,0,.35), inset 0 1px 0 rgba(255,255,255,.55); transition: transform .1s, box-shadow .1s; border: 0; cursor: pointer; }
+.btn svg { width: 22px; height: 22px; }
 .btn:hover { transform: translateY(-1px); }
 .btn:active { transform: translateY(3px); box-shadow: 0 2px 0 var(--edge), 0 4px 8px rgba(0,0,0,.35); }
-.btn.ghost { --edge: rgba(0,0,0,.35); color: var(--text); background: rgba(255,255,255,.08); border: 1.5px solid rgba(255,255,255,.25); box-shadow: 0 4px 0 var(--edge); }
-.btn.soon { cursor: default; --edge: transparent; color: var(--cyan); background: rgba(0,212,255,.1); border: 1.5px dashed rgba(0,212,255,.6); box-shadow: none; padding: 14px 22px; font-size: 13px; }
-.btn.soon:hover, .btn.soon:active { transform: none; box-shadow: none; }
+.btn[aria-disabled="true"] { --edge: rgba(0,0,0,.4); color: rgba(255,255,255,.7); background: rgba(255,255,255,.1); box-shadow: 0 5px 0 var(--edge); cursor: default; }
+.btn.ghost { --edge: rgba(0,0,0,.35); color: var(--text); background: rgba(255,255,255,.08); border: 1.5px solid rgba(255,255,255,.25); padding: 15px 24px; font-size: 14px; }
+.meta { margin-top: 12px; font-size: 13.5px; color: var(--muted); }
+.meta span + span::before { content: "\00b7"; margin: 0 8px; }
+.verify { margin-top: 10px; font-size: 12.5px; color: var(--muted); word-break: break-all; }
+.verify code { font-size: 12px; color: var(--text); }
 
-/* hero */
-.hero { padding: 56px 0 40px; }
-.hero .grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 40px; align-items: center; }
-.balls { display: flex; gap: 8px; margin-bottom: 22px; position: relative; width: max-content; }
-.balls::after { content: ''; position: absolute; left: 3%; right: 3%; bottom: -10px; height: 3px; border-radius: 3px; background: linear-gradient(90deg, transparent, var(--gold), transparent); box-shadow: 0 0 14px rgba(255,215,0,.7); }
-.balls .ball { width: 38px; height: 38px; animation: wave 2.4s ease-in-out infinite; animation-delay: calc(var(--i) * .12s); }
-@keyframes wave { 0%, 60%, 100% { transform: translateY(0); } 30% { transform: translateY(-9px); } }
-.hero h1 { font-size: clamp(48px, 9vw, 84px); letter-spacing: 3px; background: linear-gradient(180deg, #fff 20%, #8fe6ff 100%); -webkit-background-clip: text; background-clip: text; color: transparent; filter: drop-shadow(0 0 22px rgba(0,212,255,.4)); }
-.hero .sub { font-family: var(--font-display); font-weight: 700; font-size: 16px; letter-spacing: 8px; color: var(--cyan); margin: 10px 0 22px; }
-.hero p.tag { font-size: clamp(20px, 3.4vw, 26px); font-weight: 500; margin-bottom: 10px; }
-.hero p.desc { color: var(--muted); font-size: 18px; max-width: 520px; margin-bottom: 28px; }
-.cta { display: flex; flex-wrap: wrap; gap: 16px; }
-.pills { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px; }
-.pill { font-family: var(--font-display); font-weight: 700; font-size: 12px; letter-spacing: 1.5px; padding: 8px 16px; border-radius: 999px; background: rgba(255,255,255,.08); border: 1px solid rgba(0,212,255,.45); color: var(--cyan); }
-.hero-shot { display: flex; justify-content: center; position: relative; }
-.hero-shot::before { content: ''; position: absolute; inset: 8% 0 0; background: radial-gradient(circle, rgba(0,212,255,.28), transparent 65%); }
-@media (max-width: 820px) { .hero .grid { grid-template-columns: 1fr; text-align: center; } .balls, .cta, .pills { margin-inline: auto; justify-content: center; } .hero p.desc { margin-inline: auto; } }
+/* screenshots */
+.shots { display: flex; gap: 18px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 6px 2px 18px; -webkit-overflow-scrolling: touch; }
+.shots figure { flex: 0 0 auto; width: 210px; scroll-snap-align: start; }
+.shots img { width: 100%; height: auto; aspect-ratio: 540 / 960; object-fit: cover; border-radius: 22px; border: 2px solid rgba(255,255,255,.14); box-shadow: 0 14px 34px rgba(0,0,0,.5); background: #0c0d26; }
+.shots figcaption { margin-top: 8px; text-align: center; font-size: 13px; color: var(--muted); }
+.shots::-webkit-scrollbar { height: 8px; }
+.shots::-webkit-scrollbar-thumb { background: rgba(0,212,255,.4); border-radius: 8px; }
 
-/* phone frame */
-.phone { position: relative; width: min(280px, 70vw); aspect-ratio: 540 / 960; border: 10px solid #07081c; border-radius: 42px; overflow: hidden; background: #0c0d26; box-shadow: 0 30px 70px rgba(0,0,0,.6), 0 0 0 2px rgba(255,255,255,.1), 0 0 70px rgba(0,212,255,.22); }
-.phone img { width: 100%; height: 100%; object-fit: cover; }
+/* video */
+.video { position: relative; width: 100%; max-width: 760px; aspect-ratio: 16 / 9; border-radius: 20px; overflow: hidden; background: #000 center / cover no-repeat; box-shadow: 0 16px 40px rgba(0,0,0,.5); border: 2px solid rgba(255,255,255,.14); }
+.video iframe, .video video { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.vplay { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; cursor: pointer; background: linear-gradient(180deg, rgba(0,0,0,.05), rgba(0,0,0,.45)); display: flex; align-items: center; justify-content: center; }
+.vplay i { width: 74px; height: 74px; border-radius: 50%; background: rgba(0,191,240,.95); display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 24px rgba(0,0,0,.5); }
+.vplay i::after { content: ""; margin-left: 6px; border-left: 22px solid var(--ink); border-top: 14px solid transparent; border-bottom: 14px solid transparent; }
 
-/* how to play */
-.steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; counter-reset: s; }
-.step { counter-increment: s; background: linear-gradient(160deg, rgba(60,63,112,.7), rgba(26,27,65,.85)); border: 1.5px solid rgba(0,212,255,.35); border-radius: 22px; padding: 26px 22px; }
-.step::before { content: counter(s); display: flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 50%; border: 2px solid var(--cyan); color: var(--cyan); font-family: var(--font-display); font-weight: 700; margin-bottom: 14px; }
-.step h3 { font-size: 19px; margin-bottom: 8px; }
-.step p { color: var(--muted); }
-.demo { position: relative; display: flex; align-items: center; gap: 3px; margin-top: 16px; height: 30px; }
-.demo i { display: block; width: 30px; height: 30px; border-radius: 8px; background: linear-gradient(145deg, #dfe6fb, #b9c4e6); box-shadow: inset 0 2px 3px rgba(20,25,70,.45); }
-.demo .ball { position: absolute; top: 4px; left: calc(4px + var(--x, 0) * 33px); width: 22px; height: 22px; }
-.demo .ok { margin-left: 8px; color: #3be07f; font-weight: 700; }
-.d-line .ball { animation: pop 3.4s ease-in-out infinite; animation-delay: calc(var(--x) * .15s); }
-.d-slide .mover, .d-opp .mover { animation: slide 3s ease-in-out infinite; }
-.d-opp .mover { animation-delay: .6s; }
-@keyframes slide { 0%, 15% { transform: translateX(0); } 40%, 60% { transform: translateX(33px); } 85%, 100% { transform: translateX(0); } }
-@keyframes pop { 0% { transform: scale(0); opacity: 0; } 10% { transform: scale(1.2); opacity: 1; } 16%, 80% { transform: scale(1); opacity: 1; } 95%, 100% { transform: scale(.6); opacity: 0; } }
-@media (max-width: 820px) { .steps { grid-template-columns: 1fr; } }
-
-/* gallery */
-.gallery { display: flex; gap: 22px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 14px 20px 30px; margin-inline: auto; -webkit-overflow-scrolling: touch; }
-.gallery figure { flex: 0 0 auto; scroll-snap-align: center; text-align: center; }
-.gallery .phone { width: 230px; }
-.gallery figcaption { margin-top: 14px; font-weight: 500; color: var(--muted); font-size: 15px; }
-.gallery::-webkit-scrollbar { height: 8px; }
-.gallery::-webkit-scrollbar-thumb { background: rgba(0,212,255,.4); border-radius: 8px; }
-
-/* features */
-.features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
-.feat { background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.12); border-radius: 20px; padding: 24px 22px; }
-.feat .ic { width: 46px; height: 46px; border-radius: 14px; display: flex; align-items: center; justify-content: center; margin-bottom: 14px; background: linear-gradient(180deg, rgba(0,212,255,.25), rgba(0,212,255,.08)); border: 1px solid rgba(0,212,255,.45); color: var(--cyan); }
-.feat .ic svg { width: 24px; height: 24px; }
-.feat h3 { font-size: 17px; margin-bottom: 6px; }
-.feat p { color: var(--muted); font-size: 15.5px; }
-@media (max-width: 900px) { .features { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 560px) { .features { grid-template-columns: 1fr; } }
-
-/* faq */
-.faq { max-width: 760px; margin: 0 auto; display: grid; gap: 12px; }
-details { background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.12); border-radius: 16px; padding: 4px 20px; }
-summary { cursor: pointer; font-weight: 500; font-size: 17px; padding: 14px 0; list-style: none; display: flex; justify-content: space-between; gap: 12px; }
+/* text sections */
+.about p { margin-bottom: 14px; font-size: 16.5px; max-width: 760px; }
+.feats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 18px; list-style: none; }
+.feats li { padding: 14px 16px; border-radius: 16px; background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.12); font-size: 15px; color: var(--text); }
+.feats b { display: block; font-family: var(--font-display); font-size: 14px; color: var(--cyan); margin-bottom: 2px; }
+.steps { list-style: none; counter-reset: s; display: grid; gap: 12px; max-width: 760px; }
+.steps li { counter-increment: s; position: relative; padding: 14px 16px 14px 62px; border-radius: 16px; background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.12); color: var(--muted); }
+.steps li::before { content: counter(s); position: absolute; left: 16px; top: 50%; transform: translateY(-50%); width: 32px; height: 32px; border-radius: 50%; border: 2px solid var(--cyan); color: var(--cyan); font-family: var(--font-display); font-weight: 700; display: flex; align-items: center; justify-content: center; }
+.steps b { color: var(--text); }
+.note { margin-top: 14px; font-size: 14px; max-width: 760px; }
+.new { list-style: none; max-width: 760px; }
+.new li { padding: 6px 0 6px 22px; position: relative; color: var(--muted); }
+.new li::before { content: ""; position: absolute; left: 4px; top: 15px; width: 8px; height: 8px; border-radius: 50%; background: var(--gold); box-shadow: 0 0 8px rgba(255,215,0,.7); }
+details { max-width: 760px; margin-bottom: 10px; background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.12); border-radius: 14px; padding: 2px 18px; }
+summary { cursor: pointer; font-weight: 500; font-size: 16px; padding: 13px 0; list-style: none; display: flex; justify-content: space-between; gap: 12px; color: var(--text); }
 summary::-webkit-details-marker { display: none; }
-summary::after { content: '+'; color: var(--cyan); font-size: 24px; line-height: 1; }
-details[open] summary::after { content: '–'; }
-details p { color: var(--muted); padding-bottom: 16px; }
+summary::after { content: "+"; color: var(--cyan); font-size: 22px; line-height: 1; }
+details[open] summary::after { content: "\2013"; }
+details p { padding-bottom: 14px; }
 
-/* final cta + footer */
-.final { text-align: center; }
-.final h2 { margin-bottom: 14px; }
-.final .cta { justify-content: center; margin-top: 26px; }
-footer { border-top: 1px solid rgba(255,255,255,.1); padding: 28px 0 40px; text-align: center; color: var(--muted); font-size: 14px; }
+footer { margin-top: 48px; border-top: 1px solid rgba(255,255,255,.1); padding: 26px 0 40px; text-align: center; font-size: 13.5px; color: var(--muted); }
+footer a { color: var(--muted); margin: 0 8px; }
+footer p { margin-top: 8px; font-size: 12.5px; }
+[hidden] { display: none !important; }
 
-@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; scroll-behavior: auto !important; } }
+@media (max-width: 560px) {
+  .head { grid-template-columns: 1fr; text-align: center; justify-items: center; }
+  .facts, .cta { justify-content: center; }
+  .head .appicon { width: 118px; height: 118px; }
+  .feats { grid-template-columns: 1fr; }
+  .shots figure { width: 168px; }
+  .btn { width: 100%; justify-content: center; }
+  .btn.ghost { width: auto; }
+  .meta, .verify { text-align: center; }
+}
+@media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; transition: none !important; } }
 </style>
 </head>
 <body>
 
 <header>
-  <div class="wrap nav">
-    <a class="brand" href="#top" aria-label="Sixline home"><img src="assets/icon-192.png" alt="" width="34" height="34">SIXLINE</a>
-    <ul>
-      <li><a class="l" href="#how">How to play</a></li>
-      <li><a class="l" href="#screens">Screenshots</a></li>
-      <li><a class="l" href="#features">Features</a></li>
-      <li><a class="l" href="#faq">FAQ</a></li>
-    </ul>
+  <div class="wrap bar">
+    <a class="brand" href="#top" aria-label="Sixline"><img src="assets/icon-192.png" alt="" width="32" height="32">SIXLINE</a>
+    <a class="top" href="https://github.com/titokip/titokip.github.io/releases/download/v1.0.3/Sixline.apk">Download</a>
   </div>
 </header>
 
 <main id="top">
-  <section class="hero">
-    <div class="wrap grid">
+  <section class="hero wrap">
+    <div class="head">
+      <img class="appicon" src="assets/icon-512.png" alt="Sixline app icon" width="132" height="132">
       <div>
-        <div class="balls" aria-hidden="true">
-          <span class="ball" style="--i:0"></span><span class="ball" style="--i:1"></span><span class="ball" style="--i:2"></span><span class="ball" style="--i:3"></span><span class="ball" style="--i:4"></span><span class="ball" style="--i:5"></span>
-        </div>
-        <h1>SIXLINE</h1>
-        <div class="sub">SIX IN A ROW</div>
-        <p class="tag">Align six. Outsmart the AI.</p>
-        <p class="desc">A relaxing strategy game that keeps your mind sharp. Slide your balls one step at a time, block your opponent and line up six to win.</p>
-        <div class="cta">
-          <!-- When the app is live, replace this with your Google Play link and the text "Get it on Google Play":
-               <a class="btn" href="https://play.google.com/store/apps/details?id=YOUR.PACKAGE.NAME">Get it on Google Play</a> -->
-          <span class="btn soon" role="note">Coming soon to Google Play</span>
-          <a class="btn ghost" href="#how">How to play</a>
-        </div>
-        <div class="pills"><span class="pill">FREE TO PLAY</span><span class="pill">WORKS OFFLINE</span><span class="pill">3 DIFFICULTY LEVELS</span></div>
+        <h1>Sixline: Six in a Row Game</h1>
+        <p class="tag">Download the Android game. Align six. Outsmart the AI.</p>
+        <div class="facts"><span class="fact">Android</span><span class="fact">Works offline</span><span class="fact">3 difficulty levels</span><span class="fact">Free</span></div>
       </div>
-      <div class="hero-shot">
-        <div class="phone"><img src="assets/game-hero.webp" width="540" height="960" alt="Sixline gameplay: five black balls in a row and one move from winning"></div>
-      </div>
+    </div>
+
+    <div class="cta" id="download">
+      <a class="btn" id="apkBtn" href="https://github.com/titokip/titokip.github.io/releases/download/v1.0.3/Sixline.apk" aria-disabled="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 11l5 5 5-5M5 20h14"/></svg><span id="apkLabel">Download Free Game</span></a>
+      <a class="btn ghost" id="videoBtn" href="#videoBox"  hidden>Watch video</a>
+      <a class="btn ghost" id="playBtn" href="#" hidden rel="noopener">Google Play</a>
+      <a class="btn ghost" id="amazonBtn" href="https://www.amazon.com/offline-casual-strategy-board-smart/dp/B0HLWP4NYP" hidden rel="noopener">Amazon Appstore</a>
+    </div>
+    <p class="meta" id="metaLine" hidden></p>
+    <p class="verify" id="verifyLine" hidden>SHA-256: <code id="shaCode"></code></p>
+  </section>
+
+  <section class="wrap" aria-labelledby="shots-h">
+    <h2 id="shots-h">Screenshots</h2>
+    <div class="shots" tabindex="0" aria-label="Sixline screenshots">
+      <figure><img loading="lazy" src="assets/game-board.webp" width="540" height="960" alt="Sixline game board with five black balls in a row and one move from winning"><figcaption>The board</figcaption></figure>
+      <figure><img loading="lazy" src="assets/game-six.webp" width="540" height="960" alt="Six black balls in a glowing gold row"><figcaption>Six in a row wins</figcaption></figure>
+      <figure><img loading="lazy" src="assets/game-victory.webp" width="540" height="960" alt="Victory screen with three stars, score and the winning line"><figcaption>Victory</figcaption></figure>
+      <figure><img loading="lazy" src="assets/game-streak.webp" width="540" height="960" alt="Start screen with a daily streak flame and a seven-day calendar"><figcaption>Daily streak</figcaption></figure>
+      <figure><img loading="lazy" src="assets/game-stats.webp" width="540" height="960" alt="Stats screen showing wins, win rate and streaks"><figcaption>Your stats</figcaption></figure>
+      <figure><img loading="lazy" src="assets/game-levels.webp" width="540" height="960" alt="Choose Easy, Medium or Hard difficulty"><figcaption>Three levels</figcaption></figure>
+      <figure><img loading="lazy" src="assets/game-howto.webp" width="540" height="960" alt="How to play instructions with small animated examples"><figcaption>How to play</figcaption></figure>
     </div>
   </section>
 
-  <section id="how">
-    <div class="wrap">
-      <h2>Learn in seconds</h2>
-      <p class="lead">Simple rules, deep strategy. Here is everything you need to know.</p>
-      <div class="steps">
-        <div class="step">
-          <h3>Line up six</h3>
-          <p>Drag your black balls to form a line of six, across, down or diagonally, to win.</p>
-          <div class="demo d-line" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i>
-            <span class="ball" style="--x:0"></span><span class="ball" style="--x:1"></span><span class="ball" style="--x:2"></span><span class="ball" style="--x:3"></span><span class="ball" style="--x:4"></span><span class="ball" style="--x:5"></span></div>
-        </div>
-        <div class="step">
-          <h3>One step at a time</h3>
-          <p>Move one ball per turn into a neighbouring empty cell. You cannot jump over other balls.</p>
-          <div class="demo d-slide" aria-hidden="true"><i></i><i></i><i></i><i></i>
-            <span class="ball cy" style="--x:2"></span><span class="ball mover" style="--x:0"></span><span class="ok">&#10003;</span></div>
-        </div>
-        <div class="step">
-          <h3>Beat the AI</h3>
-          <p>Your opponent answers every move, so block its lines while you build your own. The game lasts until someone wins.</p>
-          <div class="demo d-opp" aria-hidden="true"><i></i><i></i><i></i><i></i>
-            <span class="ball cy mover" style="--x:1"></span></div>
-        </div>
-      </div>
-    </div>
+  <section class="wrap" id="video" hidden aria-labelledby="video-h">
+    <h2 id="video-h">Watch Sixline in action</h2>
+    <div class="video" id="videoBox"></div>
   </section>
 
-  <section id="screens">
-    <div class="wrap"><h2>See it in action</h2><p class="lead">Swipe through the game.</p></div>
-    <div class="gallery" role="list" tabindex="0" aria-label="Sixline screenshots">
-      <figure role="listitem"><div class="phone"><img loading="lazy" src="assets/game-start.webp" width="540" height="960" alt="Sixline start screen"></div><figcaption>Start screen</figcaption></figure>
-      <figure role="listitem"><div class="phone"><img loading="lazy" src="assets/game-drag.webp" width="540" height="960" alt="Dragging a ball with valid cells highlighted"></div><figcaption>Drag and plan ahead</figcaption></figure>
-      <figure role="listitem"><div class="phone"><img loading="lazy" src="assets/game-six.webp" width="540" height="960" alt="Six black balls in a glowing row"></div><figcaption>Six in a row wins</figcaption></figure>
-      <figure role="listitem"><div class="phone"><img loading="lazy" src="assets/game-victory.webp" width="540" height="960" alt="Victory screen with trophy and score"></div><figcaption>Celebrate the win</figcaption></figure>
-      <figure role="listitem"><div class="phone"><img loading="lazy" src="assets/game-levels.webp" width="540" height="960" alt="Choose Easy, Medium or Hard difficulty"></div><figcaption>Pick your challenge</figcaption></figure>
-      <figure role="listitem"><div class="phone"><img loading="lazy" src="assets/game-learn.webp" width="540" height="960" alt="How to play instructions"></div><figcaption>Quick how-to-play</figcaption></figure>
-    </div>
+  <section class="wrap about" aria-labelledby="about-h">
+    <h2 id="about-h">About this game</h2>
+    <p>Sixline is a calm, clever strategy game for anyone who enjoys thinking a few moves ahead. The goal is simple: line up six of your balls in a row, across, down or diagonally, before your opponent does.</p>
+    <p>You never place new pieces. Each turn you swipe one of your balls a single step into a neighbouring empty cell, and you cannot jump over other balls. Build your own line, block your rival's and watch for the moment to strike. A smart AI answers every move, so no two games play out the same way.</p>
+    <ul class="feats">
+      <li><b>Easy to learn</b>Swipe a ball to move it one step. A short guide shows the rules in seconds.</li>
+      <li><b>Three difficulty levels</b>Start on Easy, then work up to Medium and Hard.</li>
+      <li><b>Works offline</b>Play anywhere. No internet is needed to play.</li>
+      <li><b>Daily streak</b>Play a little each day and keep your flame growing.</li>
+      <li><b>Stats and best scores</b>Wins, win rate, streaks and fastest wins for every level.</li>
+      <li><b>Made your way</b>Switch sound, music, vibration and reduced motion in Settings.</li>
+    </ul>
   </section>
 
-  <section id="features">
-    <div class="wrap">
-      <h2>Why you'll enjoy it</h2>
-      <p class="lead">A calm brain workout that fits into any moment.</p>
-      <div class="features">
-        <div class="feat"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 00-4 10.5V17h8v-3.5A6 6 0 0012 3z"/><path d="M9 21h6"/></svg></div><h3>Relaxing yet sharp</h3><p>Easy to pick up, mentally stimulating, and never stressful. Play at your own pace.</p></div>
-        <div class="feat"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12.5a10 10 0 0114 0M8.5 16a5 5 0 017 0"/><circle cx="12" cy="19.5" r="1" fill="currentColor"/><path d="M3 3l18 18"/></svg></div><h3>Works offline</h3><p>No internet needed. Play on the bus, on a flight or anywhere in between.</p></div>
-        <div class="feat"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 20V14M12 20V9M20 20V4"/></svg></div><h3>Three difficulty levels</h3><p>Start on Easy, then work up to Medium and Hard as your strategy improves.</p></div>
-        <div class="feat"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="7" width="16" height="12" rx="3"/><path d="M12 7V4M9 12h.01M15 12h.01M9 16h6"/></svg></div><h3>A smart opponent</h3><p>The AI blocks your lines and builds its own, so every game plays out differently.</p></div>
-        <div class="feat"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 4h8v5a4 4 0 01-8 0V4z"/><path d="M8 6H4v1a4 4 0 004 4M16 6h4v1a4 4 0 01-4 4M12 13v4M8 20h8"/></svg></div><h3>Track your best</h3><p>Your wins, losses and best score for each level are saved on your device.</p></div>
-        <div class="feat"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11V5a2 2 0 014 0v6"/><path d="M13 11V9a2 2 0 014 0v4a7 7 0 01-7 7h-1a6 6 0 01-5-3l-1.5-2.5a1.7 1.7 0 012.8-1.8L9 14"/></svg></div><h3>Smooth touch controls</h3><p>Drag a ball and see exactly which cells you can move to. It feels natural on any phone.</p></div>
-      </div>
-    </div>
+  <section class="wrap" aria-labelledby="install-h">
+    <h2 id="install-h">How to install the Sixline APK</h2>
+    <ol class="steps">
+      <li><b>Download the file.</b> Tap the Download button above on your Android phone or tablet.</li>
+      <li><b>Open it.</b> When the download finishes, tap the file in your notifications or in the Files app.</li>
+      <li><b>Allow the install if asked.</b> Android may say it needs permission to install apps from this source. Allow it for your browser or Files app only. You can switch it off again afterwards.</li>
+      <li><b>Tap Install, then Open.</b> Your first game is one tap away.</li>
+    </ol>
+    <p class="note">Because this APK doesn't come from an app store, Android may show a warning. However, Sixline has been tested to ensure it works as intended and contains no malware or viruses.</p>
   </section>
 
-  <section id="faq">
-    <div class="wrap">
-      <h2>Questions</h2>
-      <p class="lead">Quick answers before you play.</p>
-      <div class="faq">
-        <details><summary>Is Sixline free?</summary><p>Yes, Sixline is free to download and play.</p></details>
-        <details><summary>Do I need an internet connection?</summary><p>No. The whole game works offline.</p></details>
-        <details><summary>How is it different from Gomoku or Connect 6?</summary><p>Sixline is inspired by classic line-up games, but it has its own rules. You need six in a row, and instead of placing new stones you slide your existing balls one step at a time on a 6×6 board.</p></details>
-        <details><summary>How do I win?</summary><p>Be the first to line up six of your balls in a row, across, down or diagonally. You can't jump over other balls, so block your opponent's lines while you build yours.</p></details>
-        <details><summary>Which devices does it run on?</summary><p>Sixline is built for Android phones.</p></details>
-      </div>
-    </div>
+  <section class="wrap" aria-labelledby="new-h">
+    <h2 id="new-h">What's new</h2>
+    <ul class="new">
+      <li>Swipe-to-move controls for smoother play</li>
+      <li>Daily streak, plus a Stats screen for every level</li>
+      <li>Settings for sound, music, vibration and reduced motion</li>
+      <li>A redesigned result card with stars and a mini board</li>
+    </ul>
   </section>
 
-  <section class="final">
-    <div class="wrap">
-      <h2>Ready to align six?</h2>
-      <p class="lead" style="margin-bottom:0">Relax. Think. Win.</p>
-      <div class="cta"><span class="btn soon" role="note">Coming soon to Google Play</span></div>
-    </div>
+  <section class="wrap" aria-labelledby="faq-h">
+    <h2 id="faq-h">Questions</h2>
+    <details><summary>Is Sixline free?</summary><p>Yes. Sixline is free to download and play.</p></details>
+    <details><summary>Does it work offline?</summary><p>Yes, the whole game works offline.</p></details>
+    <details><summary>Is it safe to install an APK?</summary><p>Yes. Sixline is safe to download. It has been tested to ensure it works as intended and contains no malware or viruses.</p></details>
+    <details><summary>Why does Android show a warning?</summary><p>Android warns about any app that doesn't come from an app store. It doesn't mean the file is unsafe, but it is a good reminder to install only from sources you trust.</p></details>
+    <details><summary>Which Android versions does it support?</summary><p id="minAndroidAnswer">Sixline is built for Android phones and tablets.</p></details>
+    <details><summary>How do I update it?</summary><p>Download the newest APK from this page and install it over the old one. Installing a newer version of Sixline won't erase your saved scores or game progress.</p></details>
+    <details><summary>How is it different from Gomoku or Connect 6?</summary><p>Sixline is inspired by classic line-up games but has its own rules: you need six in a row, and instead of placing new stones you slide your existing balls one step at a time on a 6&times;6 board.</p></details>
   </section>
 </main>
 
 <footer>
-  <div class="wrap">&copy; 2026 Sixline. All rights reserved.</div>
+  <div class="wrap">
+    <div><a href="../">About Sixline</a><a href="privacy.html">Privacy Policy</a><a href="https://github.com/titokip/titokip.github.io/releases/download/v1.0.3/Sixline.apk">Download</a></div>
+    <p>&copy; 2026 Sixline. Android is a trademark of Google LLC.</p>
+  </div>
 </footer>
 
+<script>
+/* ===== EDIT THIS BLOCK: anything left empty is simply hidden on the page ===== */
+
+const SIXLINE = {
+  apkUrl:     "https://github.com/titokip/titokip.github.io/releases/download/v1.0.3/Sixline.apk",
+  version:    "1.0.3",
+  size:       "10 MB",
+  minAndroid: "",
+  sha256:     "",
+  video:      "https://titokip.github.io/assets/six-in-row-game.mp4",
+  googlePlay: "",
+  amazon:     "",
+  videoCover: "https://titokip.github.io/assets/video-cover.jpg" // your own cover image
+};
+/* ===== end of settings ===== */
+
+
+(function () {
+  const $ = (id) => document.getElementById(id);
+  const C = SIXLINE;
+
+  // Download button
+  const apk = $("apkBtn");
+  if (C.apkUrl) {
+    apk.href = C.apkUrl;
+    apk.removeAttribute("aria-disabled");
+    apk.setAttribute("download", "");
+    $("apkLabel").textContent = "Download APK";
+  } else {
+    apk.addEventListener("click", (e) => e.preventDefault());
+  }
+
+  // Details line under the button
+  const bits = [];
+  if (C.version) bits.push("Version " + C.version);
+  if (C.size) bits.push(C.size);
+  if (C.minAndroid) bits.push("Android " + C.minAndroid + "+");
+  if (bits.length && C.apkUrl) { $("metaLine").innerHTML = bits.map((b) => "<span>" + b + "</span>").join(""); $("metaLine").hidden = false; }
+  if (C.sha256 && C.apkUrl) { $("shaCode").textContent = C.sha256; $("verifyLine").hidden = false; }
+  if (C.minAndroid) $("minAndroidAnswer").textContent = "Sixline needs Android " + C.minAndroid + " or newer, and runs on phones and tablets.";
+
+  // Store buttons
+  if (C.googlePlay) { $("playBtn").href = C.googlePlay; $("playBtn").hidden = false; }
+  if (C.amazon) { $("amazonBtn").href = C.amazon; $("amazonBtn").hidden = false; }
+
+  // Video (click to load, so the page stays fast)
+  function parseVideo(u) {
+    u = (u || "").trim();
+    if (!u) return null;
+    const m = u.match(/(?:youtu\.be\/|youtube\.com\/(?:watch\?(?:.*&)?v=|embed\/|shorts\/))([\w-]{11})/);
+    if (m) return { type: "yt", id: m[1] };
+    if (/\.(mp4|webm)(\?|$)/i.test(u)) return { type: "file", src: u };
+    return { type: "link", src: u };
+  }
+  const v = parseVideo(C.video);
+  if (v) {
+    $("video").hidden = false;
+    $("videoBtn").hidden = false;
+    const box = $("videoBox");
+    if (v.type === "yt") {
+      box.style.backgroundImage = "url(https://i.ytimg.com/vi/" + v.id + "/hqdefault.jpg)";
+      box.innerHTML = '<button class="vplay" aria-label="Play video"><i></i></button>';
+      box.querySelector(".vplay").addEventListener("click", () => {
+        box.innerHTML = '<iframe src="https://www.youtube-nocookie.com/embed/' + v.id + '?autoplay=1&rel=0" title="Sixline video" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>';
+      });
+    } else if (v.type === "file") {
+      box.innerHTML = '<video controls preload="none" playsinline' + (C.videoCover ? ' poster="' + C.videoCover + '"' : '') + ' src="' + v.src + '"></video>';
+    } else {
+      box.innerHTML = '<a class="btn" style="margin:auto" href="' + v.src + '" rel="noopener">Watch the video</a>';
+      box.style.display = "flex";
+    }
+  }
+
+  // Keep the search-engine data in step with the settings above
+  try {
+    const ld = $("ld-app");
+    const data = JSON.parse(ld.textContent);
+    if (C.apkUrl) data.downloadUrl = C.apkUrl;
+    if (C.version) data.softwareVersion = C.version;
+    if (C.size) data.fileSize = C.size;
+    if (C.minAndroid) data.operatingSystem = "Android " + C.minAndroid + "+";
+    ld.textContent = JSON.stringify(data);
+  } catch (e) {}
+})();
+</script>
 </body>
 </html>
